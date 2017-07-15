@@ -1,0 +1,59 @@
+body{
+	margin:0;
+	background:#000;
+}
+#layer{
+	perspective: 1000px;
+	overflow:hidden;
+}
+#first{
+	transform-style:preserve-3d;
+	transition: 3s;
+	perspective-origin: center center -127px;
+	position:absolute;
+	width:198px;
+	height:198px;
+	transform:translateZ(-500px) rotateY(0deg);
+}
+.singershow{
+	width:198px;
+	height:198px;
+	border:1px solid #000;
+	position:absolute;
+}
+#first div:nth-of-type(3){
+	left: 0px;
+	top: 0px;
+	transform:translateZ(300px);
+	/*transform:translateZ(-254px) rotateY(180deg);*/
+}
+#first div:nth-of-type(2){
+	left: 250px;
+	top: 0px;
+	transform:translateZ(300px)  rotateY(45deg);
+	transform-origin: left;
+}
+#first div:nth-of-type(1){
+	left: -250px;
+	top: 0px;
+	transform:translateZ(300px)  rotateY(-45deg);
+	transform-origin: right;
+}
+#first div:nth-of-type(4){
+	left: 250px;
+	top: 0px;
+	transform:translateZ(-300px) rotateY(-45deg);
+	transform-origin: left;
+}
+#first div:nth-of-type(5){
+	left: -250px;
+	top: 0px;
+	transform:translateZ(-300px) rotateY(45deg);
+	transform-origin: right;
+}
+#first div:nth-of-type(6){
+	left: 0px;
+	top: 0px;
+	transform:translateZ(-300px);
+	transform-origin: left;
+}
