@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style>
+		/*十四张图片的原型矩阵：
+			内一环：
+				1.transform="matrix(1,0,0,1,0,0)"
+				2.transform="matrix(0.901,0.4339,-0.4339,0.901,296.1668,-297.5914)"
+				3.transform="matrix(0.6235,0.7818,-0.7818,0.6235,692.1239,-437.2101)"
+				4.transform="matrix(0.2225,0.9749,-0.9749,0.2225,1109.4472,-391.2028)"
+				5.transform="matrix(-0.2225,0.9749,-0.9749,-0.2225,1465.4807,-168.6819)"
+				6.transform="matrix(-0.6235,0.7818,-0.7818,-0.6235,1689.7076,186.2797)"
+				7.transform="matrix(-0.901,0.4339,-0.4339,-0.901,1737.717,603.3774)"
+				8.transform="matrix(-1,0,0,-1,1600,1000)"
+				9.transform="matrix(-0.901,-0.4339,0.4339,-0.901,1303.8332,1297.5914)"
+				10.transform="matrix(-0.6235,-0.7818,0.7818,-0.6235,907.8761,1437.2101)"
+				11.transform="matrix(-0.2225,-0.9749,0.9749,-0.2225,490.5528,1391.2028)"
+				12.transform="matrix(0.2225,-0.9749,0.9749,0.2225,134.5193,1168.6819)"
+				13.transform="matrix(0.6235,-0.7818,0.7818,0.6235,-89.7076,813.7203)"
+				14.transform="matrix(0.901,-0.4339,0.4339,0.901,-137.717,396.6226)"
+				一个半径104的圆，分成十四份，每份的*/
+		#center{
+			width:248px;
+			height:248px;
+			border-radius:50%;
+			background:#000;
+			position:absolute;
+			z-index:3;
+		}
+		body{
+			font-family:"微软雅黑";
+			margin:0;
+		}
+		img{
+			display:block;
+			position:absolute;
+			height:150px;
+			width:210px;
+			clip-path:url(#clipPath);
+
+		}
+		#zz{
+			width:100px;
+			height:100px;
+		}
+	</style>
+	</head>
+	<body>
+		<svg>
+		<defs><!-- 定义 -->
+		   <clipPath id="clipPath">
+		  	<path d="M81.67 150 L 53.62 30 Q 105 20 156.38 30 L 128.33 150"/>
+		  </clipPath>
+		</defs>
+		<div id="center"></div>
+		<div id="zz">
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<img src="img/金.png" />
+		<div>
+		</svg>
+		
+		<script src="js/2D.js"></script>
+	</body>
+</html>
