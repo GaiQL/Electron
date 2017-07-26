@@ -18,6 +18,12 @@
 			height:284px;
 			position:absolute;
 		}
+		#tfg{
+			z-index:2;
+		}
+		#tsg{
+			z-index:1;
+		}
 		body{
 			font-family:"微软雅黑";
 			margin:0;
@@ -29,23 +35,32 @@
 			height:150px;
 			width:210px;
 			clip-path:url(#clipPath_first);
-			cursor: auto;
+			cursor:auto;
 			background-size:140px 140px;
 			background-position:30px 0px;
 			transform-origin:105px 124px;
+			z-index:2;
 		}
 		.tsg{
 			position:absolute;
 			height:150px;
 			width:210px;
 			clip-path:url(#clipPath_second);
-			cursor: auto;
-			background-size:140px 140px;
-			background-position:30px 0px;
-			transform-origin:105px 124px;
+			cursor:auto;
+
+			transform-origin:105px 230px;
+			z-index:1;	
 		}
 		.ttg{
-			
+			position:absolute;
+			height:150px;
+			width:210px;
+			clip-path:url(#clipPath_third);
+			cursor:auto;
+			background-size:140px 140px;
+			background-position:30px 0px;
+			transform-origin:105px 362px;
+			z-index:0;	
 		}
 	</style>
 	</head>
@@ -57,8 +72,11 @@
 		  	//27.38 105 61.04
 		  </clipPath>
 		  <clipPath id="clipPath_second">
-		  	<path d="M77.62 150 L 43.96 30 Q 105 15 166.04 30 L 132.38 150"/>
-		  	//27.38 105 61.04
+		  	<path d="M63.30 150 L 38.44 30 Q 105 15 171.56 30 L 146.70 150"/>
+		  	//r1 = 212 , r2 = 332
+		  	//r1 16/1 = 83.25 41.62
+		  	//r2 16/1 = 130.38 65.19
+		  	//133.12，圆弧的部分 66.56
 		  </clipPath>
 		  <clipPath id="clipPath_third">
 		  	<path d="M77.62 150 L 43.96 30 Q 105 15 166.04 30 L 132.38 150"/>
