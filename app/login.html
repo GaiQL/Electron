@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvasTag1"
+      width="400"
+      height="400"
+      style="border: 10px yellow solid">
+    </canvas>
+    <canvas
+      id="myCanvasTag2"
+      width="400"
+      height="400"
+      style="border: 10px yellow solid">
+    </canvas>
+    <canvas
+      id="myCanvasTag3"
+      width="400"
+      height="400"
+      style="border: 10px yellow solid">
+    </canvas>
+    <canvas
+      id="myCanvasTag4"
+      width="400"
+      height="400"
+      style="border: 10px yellow solid">
+    </canvas>
+  </body>
+  <script type="text/javascript">
+  window.onload=function() {
+    var mycanvas1 = document.getElementById("myCanvasTag1").getContext('2d');
+    var mycanvas2 = document.getElementById("myCanvasTag2").getContext('2d');
+    var mycanvas3 = document.getElementById("myCanvasTag3").getContext('2d');
+    var mycanvas4 = document.getElementById("myCanvasTag4").getContext('2d');
+
+    function over(){
+      var mycanvas1 = document.getElementById("myCanvasTag1").getContext('2d');
+
+      mycanvas1.fillStyle='rgb(0,0,255)';
+      //颜色
+      mycanvas1.fillRect(30,30,300,300);
+      //水平，垂直，宽，高
+      mycanvas1.fillStyle='rgba(0,255,0,0.5)';
+      mycanvas1.fillRect(60,60,300,300);
+      //颜色与透明度
+      mycanvas1.fillStyle='rgba(255,0,0,0.25)';
+      mycanvas1.fillRect(90,90,300,300);
+    }
+    over();
+
+    mycanvas1.onmouseover = function(){
+      over();
+    }
+    mycanvas1.onmouseout = function(){
+      var mycanvas1 = document.getElementById("myCanvasTag1").getContext('2d');
+      mycanvas1.fillStyle='rgba(0,0,255,0.10)';
+      mycanvas1.fillRect(110,110,300,300);
+    }
+
+    var mygradient = mycanvas2.createLinearGradient(50,50,300,300);
+    mygradient.addColorStop("0","magenta");
+    mygradient.addColorStop(".25","blue");
+    mygradient.addColorStop(".50","green");
+    mygradient.addColorStop(".75","yellow");
+    mygradient.addColorStop("1.0","red");
+    mycanvas2.fillStyle = mygradient;
+    mycanvas2.fillRect(0,0,400,400);
+
+    var mygradientF = mycanvas3.createRadialGradient(300,300,0,300,300,300);
+    mygradientF.addColorStop("0","magenta");
+    mygradientF.addColorStop(".25","blue");
+    mygradientF.addColorStop(".50","green");
+    mygradientF.addColorStop(".75","yellow");
+    mygradientF.addColorStop("1.0","red");
+    mycanvas3.fillStyle = mygradientF;
+    mycanvas3.fillRect(0,0,400,400);
+  }
+  </script>
+</html>

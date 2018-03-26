@@ -1,0 +1,26 @@
+{
+  "name": "COME ON!!!!",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaiQL/Music.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaiQL/Music/issues"
+  },
+  "homepage": "https://github.com/GaiQL/Music#readme",
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "electron-packager": "^11.2.0",
+    "electron-prebuilt": "^1.4.13",
+    "nconf": "^0.10.0"
+  }
+}
